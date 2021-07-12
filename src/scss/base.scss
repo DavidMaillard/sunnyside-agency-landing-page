@@ -397,3 +397,124 @@ body {
     }
   }
 }
+
+.testimonials {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 160px 24px;
+
+  @media (max-width: $mobileBreakpoint) {
+    padding: 64px 24px;
+  }
+
+  .testimonials-container {
+    width: 100%;
+    max-width: 1110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .testimomials-heading {
+      font-family: $fontFraunces;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 25px;
+      text-align: center;
+      letter-spacing: 5px;
+      color: #A7AAAD;
+      text-transform: uppercase;
+      margin: 0 0 81px;
+
+      @media (max-width: $mobileBreakpoint) {
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 4px;
+        margin-bottom: 64px;
+      }
+    }
+
+    .testimonials-list {
+      width: 100%;
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+
+      @media (max-width: $mobileBreakpoint) {
+        flex-direction: column;
+      }
+
+      .testimonials-item {
+        width: calc((100% - 60px) / 3);
+        min-height: 351px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media (max-width: $mobileBreakpoint) {
+          width: 100%;
+          min-height: auto;
+          margin-bottom: 98px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        .item-image {
+          width: 72px;
+          height: 72px;
+          border-radius: 72px;
+          object-position: center center;
+          object-fit: cover;
+          margin-bottom: 58px;
+
+          @media (max-width: $mobileBreakpoint) {
+            margin-bottom: 32px;
+          }
+        }
+
+        .item-text {
+          flex: 1;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 32px;
+          text-align: center;
+          letter-spacing: -0.128571px;
+          color: #5B636D;
+          margin: 0 0 32px;
+
+          @media (max-width: $mobileBreakpoint) {
+            max-width: 330px;
+          }
+        }
+
+        .item-name {
+          font-family: $fontFraunces;
+          font-style: normal;
+          font-weight: 900;
+          font-size: 18px;
+          line-height: 22px;
+          text-align: center;
+          letter-spacing: -0.128571px;
+          color: #24303E;
+          margin: 0 0 9px;
+        }
+
+        .item-ref {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 25px;
+          text-align: center;
+          letter-spacing: -0.1px;
+          color: #A7AAAD;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
