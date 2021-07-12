@@ -178,9 +178,147 @@ body {
   }
 }
 
-.main-page {
+.text-image-grid {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+
+  .grid-line {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+
+    @media (max-width: $mobileBreakpoint) {
+      flex-direction: column-reverse;
+    }
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+
+      @media (max-width: $mobileBreakpoint) {
+        flex-direction: column-reverse;
+      }
+    }
+
+    .text-container {
+      width: 50%;
+      background-color: #FFFFFF;
+      padding: 64px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media (max-width: $mobileBreakpoint) {
+        width: 100%;
+      }
+
+      .text-wrapper {
+        width: 100%;
+        max-width: 445px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        @media (max-width: $mobileBreakpoint) {
+          align-items: center;
+        }
+
+        .grid-heading {
+          font-family: $fontFraunces;
+          font-style: normal;
+          font-weight: 900;
+          font-size: 40px;
+          line-height: 49px;
+          letter-spacing: -0.285714px;
+          color: #24303E;
+          margin: 0 0 32px;
+
+          @media (max-width: $mobileBreakpoint) {
+            font-size: 32px;
+            line-height: 39px;
+            text-align: center;
+            letter-spacing: -0.228571px;
+            margin-bottom: 24px;
+          }
+        }
+
+        .grid-text {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 30px;
+          letter-spacing: -0.128571px;
+          color: #808397;
+          margin: 0 0 40px;
+
+          @media (max-width: $mobileBreakpoint) {
+            font-size: 18px;
+            line-height: 30px;
+            text-align: center;
+            margin-bottom: 32px;
+          }
+        }
+
+        .grid-link {
+          position: relative;
+          padding: 0 8px;
+          font-family: $fontFraunces;
+          font-style: normal;
+          font-weight: 900;
+          font-size: 15px;
+          line-height: 25px;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          color: #24303E;
+          text-decoration: none;
+
+          &:hover {
+            &:before {
+              opacity: 1;
+            }
+          }
+
+          &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 10px;
+            background: #FAD400;
+            mix-blend-mode: normal;
+            opacity: 0.25;
+            border-radius: 28px;
+            transition: opacity ease-out .2s;
+          }
+
+          span {
+            position: relative;
+          }
+
+          &.red {
+            &:before {
+              background: #FE7766;
+            }
+          }
+        }
+      }
+    }
+
+    .image-container {
+      width: 50%;
+      display: flex;
+
+      @media (max-width: $mobileBreakpoint) {
+        width: 100%;
+        max-height: 400px;
+      }
+
+      .grid-image {
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+      }
+    }
+  }
 }
