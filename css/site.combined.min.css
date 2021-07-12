@@ -461,6 +461,23 @@ body {
           color: #A7AAAD;
           margin: 0; }
 
+.gallery {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  .gallery .gallery-image {
+    width: 25%; }
+    @media (max-width: 800px) {
+      .gallery .gallery-image {
+        width: 50%;
+        height: 50vw;
+        object-position: center center;
+        object-fit: cover; } }
+
 
 
 /*# sourceMappingURL=site.combined.min.css.map */
